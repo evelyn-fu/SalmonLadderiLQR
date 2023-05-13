@@ -1,0 +1,1 @@
+FROM russtedrake/drake:hybrid_trajopt

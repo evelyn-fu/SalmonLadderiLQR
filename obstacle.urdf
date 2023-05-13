@@ -1,0 +1,150 @@
+<?xml version="1.0"?><robot name="Obstacle">
+  <link name="obstacle_base">
+    <visual>
+      <origin xyz="0.125 0 0" rpy="0 0 0" />
+      <geometry>
+  14    <box size=".1 100 2"/>
+      </geometry>
+      <material>
+        <color rgba="0 0 1 0" />
+      </material>
+    </visual>
+
+    <visual>
+      <origin xyz="0 0 -3" rpy="0 0 0" />
+      <geometry>
+  14    <box size="100 100 2"/>
+      </geometry>
+      <material>
+        <color rgba="0 0 1 0" />
+      </material>
+    </visual>
+
+    <visual>
+      <origin xyz="-3 0 0" rpy="0 0 0" />
+      <geometry>
+  14    <box size="1 100 100"/>
+      </geometry>
+      <material>
+        <color rgba="0 0 1 0" />
+      </material>
+    </visual>
+
+    <visual>
+      <origin xyz="3 0 0" rpy="0 0 0" />
+      <geometry>
+  14    <box size="1 100 100"/>
+      </geometry>
+      <material>
+        <color rgba="0 0 1 0" />
+      </material>
+    </visual>
+
+    <visual>
+      <origin xyz="0 5 0" rpy="0 0 0" />
+      <geometry>
+  14    <box size="100 1 100"/>
+      </geometry>
+      <material>
+        <color rgba="0 0 1 0" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0.125 0 0" rpy="0 0 0" />
+      <geometry>
+  14    <box size=".1 100 2"/>
+      </geometry>
+    </collision>
+
+    <collision>
+      <origin xyz="0 0 -3" rpy="0 0 0" />
+      <geometry>
+  14    <box size="100 100 2"/>
+      </geometry>
+    </collision>
+
+    <collision>
+      <origin xyz="-3 0 0" rpy="0 0 0" />
+      <geometry>
+  14    <box size="1 100 100"/>
+      </geometry>
+    </collision>
+
+    <collision>
+      <origin xyz="3 0 0" rpy="0 0 0" />
+      <geometry>
+  14    <box size="1 100 100"/>
+      </geometry>
+    </collision>
+
+    <collision>
+      <origin xyz="0 5 0" rpy="0 0 0" />
+      <geometry>
+  14    <box size="100 1 100"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="obstacle_arms">
+    <visual>
+      <origin xyz="0 0 0.5" rpy="0 0.2 0" />
+      <geometry>
+  14    <box size="0.25 100 0.1"/>
+      </geometry>
+      <material>
+        <color rgba="0 0 1 0" />
+      </material>
+    </visual>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0.2 0" />
+      <geometry>
+  14    <box size="0.25 100 0.1"/>
+      </geometry>
+      <material>
+        <color rgba="0 0 1 0" />
+      </material>
+    </visual>
+
+    <visual>
+      <origin xyz="0 0 -0.5" rpy="0 0.2 0" />
+      <geometry>
+  14    <box size="0.25 100 0.1"/>
+      </geometry>
+      <material>
+        <color rgba="0 0 1 0" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.5" rpy="0 0.2 0" />
+      <geometry>
+  14    <box size="0.25 100 0.1"/>
+      </geometry>
+    </collision>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0.2 0" />
+      <geometry>
+  14    <box size="0.25 100 0.1"/>
+      </geometry>
+    </collision>
+
+    <collision>
+      <origin xyz="0 0 -0.5" rpy="0 0.2 0" />
+      <geometry>
+  14    <box size="0.25 100 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="obstacle_glue" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="obstacle_base" />
+    <child link="obstacle_arms" />
+    <axis xyz="0 -1 0" />
+  </joint>
+
+  </robot>
+</xml>
